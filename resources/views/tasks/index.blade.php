@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
                     <h3>
@@ -37,7 +37,7 @@
                         <tr class="table-{{ $task->is_active ? 'success' : 'danger'}}">
                             <td><a href="{{route('tasks.edit', $task->id)}}">{{$task->description}}</a></td>
                             <td>{{$task->last_run}}</td>
-                            <td>{{$task->average_runtime}}</td>
+                            <td>{{$task->average_runtime}} seconds</td>
                             <td>{{$task->next_run}}</td>
 
                             <td>
