@@ -12,6 +12,8 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js" defer></script>
+
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -19,6 +21,23 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+
+    <style type="text/css">
+        .toggle-off {
+            box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+        }
+
+        .toggle-off {
+            border-color: rgba(0, 0, 0, .25);
+        }
+
+        .toggle-handle {
+            background-color: white;
+            border: thin rgba(0, 0, 0, .25) solid;
+        }
+
+    </style>
 </head>
 <body>
     <div id="app">
