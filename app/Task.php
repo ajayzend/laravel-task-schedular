@@ -4,10 +4,12 @@ namespace App;
 
 use Cron\CronExpression;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Cache;
 
 class Task extends Model
 {
+    use Notifiable;
     protected $fillable = [
         'description',
         'command',
@@ -50,10 +52,16 @@ class Task extends Model
         });
     }
 
-    public function getALl(){
+    public function getAll(){
         return Cache::rememberForever('tasks.all', function(){
             return $this->all();
         });
+    }
+
+    public function routeNotificationForMail()
+    {
+        return $this->notification_email;
+        
     }
 }
 
